@@ -23,7 +23,7 @@ Send a GET request to the endpoint with 1 query string parameter, q, and provide
 
 # Notes
 
-1) I decided to use the Standard Search API for twitter. The Standard Search API searches tweets within the last 7 days so for some terms the function may not return a median. I decided to use the Standard Search API because it's free, updated more and because Twitter is such a popular website, it's unlikely to not find 1000 tweets for a term from the last 7 days of tweets.
+1) I decided to use the Standard Search API for twitter. The Standard Search API searches tweets within the last 7 days so for some terms the function may not return a median. I decided to use the Standard Search API because it's free, updated more and because Twitter is such a popular website, it's unlikely to not find 1000 tweets for a term from the last 7 days.
 
 
 
