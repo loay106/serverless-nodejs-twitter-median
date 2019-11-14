@@ -23,6 +23,7 @@ async function twitterMedianLength(term){
 			let lowest_id = null;
 			let tweets = res.data.statuses;
 			if(tweets.length < TWEETS_PER_REQUEST && TWEETS_PER_REQUEST*i+tweets.length < MAX_TWEETS){
+				// not enough tweets found
 				throw "Not enough tweets";
 			}
 			for(let j=0;j<tweets.length; j++){
