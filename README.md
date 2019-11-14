@@ -24,8 +24,8 @@ Send a GET request to the endpoint with 1 query string parameter, q, and provide
 # Notes
 
 1) I decided to use the Standard Search API for twitter for 2 reasons:
-  1 - It's sufficient: the API search tweets within the last 7 days. Because Twitter is a very popular website, 1000 tweets are easy to get   for almost every term provided.
-  2 - It's free.
+    - It's sufficient: the API search tweets within the last 7 days. Because Twitter is a very popular website, 1000 tweets are easy to get       for almost every term provided.
+    - It's free.
 
 
 
