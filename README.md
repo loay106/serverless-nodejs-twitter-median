@@ -30,3 +30,6 @@ Send a GET request to the endpoint with 1 query string parameter, q, and provide
    In case The Standard Search API doesn't find 1000 tweets for a given term, the median function fails.
 2) I chose to simply return 'null' for any error that might occur. The code provided is documented and it shows where errors could occur.
 
+# Example
+You can see an example of the project here: 
+https://w52hplrm9a.execute-api.us-east-1.amazonaws.com/dev/median?q=i%20want%20to%20fly
