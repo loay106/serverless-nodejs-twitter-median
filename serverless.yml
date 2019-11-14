@@ -1,0 +1,21 @@
+service: aws-node-twitter-median
+app: Tmedian
+
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+
+functions:
+  median:
+    handler: handler.median
+    events:
+        - http:
+            path: median
+            method: get
+            integration: lambda
+            request:
+                template: 
+                    application/json: '{ "term" : "$input.params(''q'')" }'
+            
