@@ -1,4 +1,4 @@
-# Calculate the median of the last 1000 tweets using REST API on serverless
+# Calculate the median of the last 1000 tweets with a REST API function on serverless
 
 This project implements a lambda AWS function using serverless, which exposes a REST API to compute the median length of the last 1000 tweets.
 
