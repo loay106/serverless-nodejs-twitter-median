@@ -23,11 +23,8 @@ Send a GET request to the endpoint with 1 query string parameter, q, and provide
 # Notes
 
 1) Twitter offers 2 free search API's - The Standard Search API and The Premium Search API.
-   I decided to use The Standard Search API for 2 reasons:
-      - It has the option to return the most recent tweets, unlike The Premium Search API.
-      - It's mostly sufficient: Twitter is a popular website and for any term provided, it's very likely to find 1000 tweets that contain           the term within the last 7 days.
-      
-   In case The Standard Search API doesn't find 1000 tweets for a given term, the median function fails.
+   I decided to use The Premium Search API because it offers more data to search.
+   In case The Premium Search API doesn't find 1000 tweets for a given term, the median function fails.
 2) I chose to simply return 'null' for any error that might occur. The code provided is documented and it shows where errors could occur.
 
 # Example
