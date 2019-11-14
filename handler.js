@@ -41,13 +41,13 @@ async function twitterMedianLength(term){
 	return median_res;
 }
 
-module.exports.median = (event, context, callback) => {
+module.exports.median = async function(event, context, callback){
 	const term = event.term;
 	if(!term){
 		// error retrieving term
 		callback(null, null);
 	}
-	let median_res = twitterMedianLength(term);
+	let median_res = await twitterMedianLength(term);
 	if(!median_res){
 		// error connecting to Twitter API
 		callback(null, null);
