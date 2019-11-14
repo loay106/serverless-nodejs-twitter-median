@@ -19,7 +19,7 @@ This project implements a lambda AWS function using serverless, which exposes a 
   
 # How to use
 
-Send a GET request to the endpoint with 1 query string parameter, q, and provide a <term>. The function will search the most recent 1000 tweets and return median length.
+Send a GET request to the endpoint with 1 query string parameter, q, and provide a term as parameter. The function will search the most recent 1000 tweets that include the term and return the median length.
 
 # Notes
 
