@@ -2,7 +2,7 @@
 
 This project implements a lambda AWS function using serverless, which exposes a REST API to compute the median length of the last 1000 tweets.
 
-# Setup
+# Setup instructions
 
 1) Create an AWS account: 
   You can create one here https://aws.amazon.com/. Then go to the AWS Management Console and then to the IAM service. Create a new group     with the following policies:
@@ -15,7 +15,7 @@ This project implements a lambda AWS function using serverless, which exposes a 
 5) Run 'sls deploy' in your CLI to deploy the project in your AWS server.
 6) Access your function by copying the endpoint URL in your browser. 
    Note that the function expects 1 query string parameter, called q, so add '?q=<term>' to your endpoint.
-  
+ 
 # How to use
 
 Send a GET request to the endpoint with 1 query string parameter, q, and provide a term as parameter. The function will search the most recent 1000 tweets that include the term and return the median length.
