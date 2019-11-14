@@ -4,7 +4,7 @@ const MAX_TWEETS = 1000;
 const TWEETS_PER_REQUEST = 100;
 
 function retrieveTweets(T,parameters){
-	return T.get('search/tweets', parameters);
+	return T.get('search/tweets/fullarchive/dev', parameters);
 }
 
 async function twitterMedianLength(term){
@@ -21,7 +21,7 @@ async function twitterMedianLength(term){
 	for(let i=0; i<MAX_TWEETS/TWEETS_PER_REQUEST; i++){
 		await retrieveTweets(T,parameters).then(res => {
 			let lowest_id = null;
-			let tweets = res.data.statuses;
+			let tweets = res.data.results;
 			if(tweets.length < TWEETS_PER_REQUEST && TWEETS_PER_REQUEST*i+tweets.length < MAX_TWEETS){
 				// not enough tweets found
 				throw "Not enough tweets";
