@@ -5,16 +5,15 @@ This project implements a lambda AWS function using serverless, which exposes a 
 # Setup
 
 1) Create an AWS account: 
-  In order to connect to the serverless framework you need an AWS account. You can create one here https://aws.amazon.com/.
-  Then go to the AWS Management Console and then to the IAM service. Create a new group with the following policies:
+  You can create one here https://aws.amazon.com/. Then go to the AWS Management Console and then to the IAM service. Create a new group     with the following policies:
       - AWSLambdaFullAccess: This policy is needed to implement 1 function in the serverless framework, which is our median function.
       - AmazonAPIGatewayAdministrator: This policy is needed in order to implement our function as a REST API.
       - AdministratorAccess: This policy is needed in order to grant serverless access to your AWS account. The access can be minimized by         configuring a cfnRole in the serverless framework. For simplicity, I'll leave it as it is.
-      
-2) Edit the config.js file to include your consumer and app keys from the Twitter developer portal.
-3) Run 'npm install' to get the dependencies.
-4) Run 'sls deploy' in your CLI to deploy the project in your AWS server.
-5) Access your function by copying the endpoint URL in your browser. 
+2) Create a serverless account and connect it to your AWS account.      
+3) Edit the config.js file to include your consumer and app keys from the Twitter developer portal.
+4) Run 'npm install' to get the dependencies.
+5) Run 'sls deploy' in your CLI to deploy the project in your AWS server.
+6) Access your function by copying the endpoint URL in your browser. 
    Note that the function expects 1 query string parameter, called q, so add '?q=<term>' to your endpoint.
   
 # How to use
