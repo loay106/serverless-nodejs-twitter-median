@@ -1,6 +1,6 @@
 'use strict';
 
-const MAX_TWEETS = 200;
+const MAX_TWEETS = 1000;
 const TWEETS_PER_REQUEST = 100;
 
 function retrieveTweets(T,parameters){
