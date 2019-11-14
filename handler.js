@@ -12,15 +12,13 @@ async function twitterMedianLength(term){
 	var Twit = require('twit');
 	var T = new Twit(config);
 	
-	var parameters = {result_type: 'recent' };
-	parameters.count = TWEETS_PER_REQUEST;
-	parameters.q = term;
+	var parameters = {query: function(){return term;};
 	var tweet_sizes = new Array(MAX_TWEETS);
 	var retrieving_error = false;
 	
 	for(let i=0; i<MAX_TWEETS/TWEETS_PER_REQUEST; i++){
 		await retrieveTweets(T,parameters).then(res => {
-			let lowest_id = null;
+			let next = res.data.next;
 			let tweets = res.data.results;
 			if(tweets.length < TWEETS_PER_REQUEST && TWEETS_PER_REQUEST*i+tweets.length < MAX_TWEETS){
 				// not enough tweets found
@@ -28,11 +26,8 @@ async function twitterMedianLength(term){
 			}
 			for(let j=0;j<tweets.length; j++){
 				tweet_sizes[TWEETS_PER_REQUEST*i+j] = tweets[j].text.length;
-				if(!lowest_id || lowest_id>tweets[i].id){
-					lowest_id = tweets[j].id;
-				}
 			}
-			parameters.max_id = lowest_id; 
+			parameters.next = next; 
 		}).catch(error => {
 			retrieving_error = true;
 		});
