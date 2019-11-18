@@ -4,7 +4,7 @@ const MAX_TWEETS = 1000;
 const TWEETS_PER_REQUEST = 100;
 
 function retrieveTweets(T,parameters){
-	return T.get('search/tweets/fullarchive/dev', parameters);
+	return T.get('tweets/search/fullarchive/dev', parameters);
 }
 
 async function twitterMedianLength(term){
@@ -12,7 +12,8 @@ async function twitterMedianLength(term){
 	var Twit = require('twit');
 	var T = new Twit(config);
 	
-	var parameters = {query: function(){return term;}};
+	var parameters = {};
+	parameters.query = term;
 	var tweet_sizes = new Array(MAX_TWEETS);
 	var retrieving_error = false;
 	
