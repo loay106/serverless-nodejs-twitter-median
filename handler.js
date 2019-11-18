@@ -12,7 +12,7 @@ async function twitterMedianLength(term){
 	var Twit = require('twit');
 	var T = new Twit(config);
 	
-	var parameters = {query: function(){return term;};
+	var parameters = {query: function(){return term;}};
 	var tweet_sizes = new Array(MAX_TWEETS);
 	var retrieving_error = false;
 	
