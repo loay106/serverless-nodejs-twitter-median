@@ -24,10 +24,6 @@ Send a GET request to the endpoint with 1 query string parameter, q, and provide
 # Notes
 
 1) Twitter offers 2 free search API's - The Standard Search API and The Premium Search API.
-   I decided to use The Premium Search API because it offers more data to search.
+   The Premium Search API was used because it offers more data to search.
    In case The Premium Search API doesn't find 1000 tweets for a given term, the median function fails.
-2) I chose to simply return 'null' for any error that might occur. The code provided is documented and it shows where errors could occur.
-
-# Example
-You can see an example of the project here: 
-https://w52hplrm9a.execute-api.us-east-1.amazonaws.com/dev/median?q=i%20want%20to%20fly
+2) The endpoint returns 'null' for any error that might occur. The code provided is documented and it shows where errors could occur.
