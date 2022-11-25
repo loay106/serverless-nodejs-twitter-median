@@ -1,4 +1,4 @@
-# Calculate the median of the last 1000 tweets with a REST API function using serverless framework
+# Median length of the last tweets on Twitter
 
 This project implements a lambda AWS function using the serverless framework, which exposes a REST API to compute the median length of the last 1000 tweets.
 
@@ -27,3 +27,4 @@ Send a GET request to the endpoint with 1 query string parameter, q, and provide
    The Premium Search API was used because it offers more data to search.
    In case The Premium Search API doesn't find 1000 tweets for a given term, the median function fails.
 2) The endpoint returns 'null' for any error that might occur. The code provided is documented and it shows where errors could occur.
+3) The REST endpoint calculates the median of the last 1000 tweets, but it can be easily changed by changing the TWEETS_PER_REQUEST variable in the handler.js file
